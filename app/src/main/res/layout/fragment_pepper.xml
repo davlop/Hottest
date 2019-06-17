@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             tools:context=".ui.explore.HeatLevelFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!-- Habanero -->
+        <TextView
+                android:id="@+id/tv_habanero_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/habanero"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_habanero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_habanero_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_habanero_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_habanero_title"/>
+
+        <!-- Carolina Reaper -->
+        <TextView
+                android:id="@+id/tv_carolina_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/carolina_reaper"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_habanero_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_carolina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_carolina_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_carolina_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_carolina_title"/>
+
+        <!-- Ghost pepper -->
+        <TextView
+                android:id="@+id/tv_ghost_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/ghost_pepper"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_carolina_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_ghost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_ghost_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_ghost_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ghost_title"/>
+
+        <!-- Trinidad Moruga -->
+        <TextView
+                android:id="@+id/tv_trinidad_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/trinidad_moruga"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_ghost_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_trinidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_trinidad_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_trinidad_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_trinidad_title"/>
+
+        <!-- Naga Pepper -->
+        <TextView
+                android:id="@+id/tv_naga_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/naga_pepper"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_trinidad_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_naga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_naga_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_naga_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_naga_title"/>
+
+        <!-- Dragon's Breath -->
+        <TextView
+                android:id="@+id/tv_dragons_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/dragons_breath"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_naga_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_dragons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_dragons_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_dragons_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_dragons_title"/>
+
+        <!-- Infinity Chili -->
+        <TextView
+                android:id="@+id/tv_infinity_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/infinity_chili"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_dragons_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_infinity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_infinity_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_infinity_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_infinity_title"/>
+
+        <!-- Pepper X -->
+        <TextView
+                android:id="@+id/tv_pepper_x_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/pepper_x"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_infinity_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_pepper_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_pepper_x_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pepper_x_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_pepper_x_title"/>
+
+        <!-- 7-Pot -->
+        <TextView
+                android:id="@+id/tv_7pot_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/seven_pot"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_pepper_x_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_7pot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_7pot_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_7pot_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_7pot_title"/>
+
+        <!-- Scotch Bonnet -->
+        <TextView
+                android:id="@+id/tv_scotch_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/scotch_bonnet"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_7pot_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_scotch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_scotch_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_scotch_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_scotch_title"/>
+
+        <!-- Jalapeño -->
+        <TextView
+                android:id="@+id/tv_jalapeno_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/jalapeno"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_scotch_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_jalapeno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_jalapeno_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_jalapeno_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jalapeno_title"/>
+
+        <!-- Cayenne -->
+        <TextView
+                android:id="@+id/tv_cayenne_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/cayenne"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_jalapeno_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_cayenne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_cayenne_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cayenne_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_cayenne_title"/>
+
+        <!-- Tabasco -->
+        <TextView
+                android:id="@+id/tv_tabasco_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/default_margin"
+                android:paddingEnd="@dimen/default_margin"
+                android:text="@string/tabasco"
+                android:textColor="#000000"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_cayenne_products"/>
+
+        <TextView
+                android:id="@+id/tv_view_all_tabasco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:paddingEnd="32dp"
+                android:text="@string/view_all"
+                android:textColor="@color/primaryDarkColor"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/rv_tabasco_products"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_tabasco_products"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/rv_home_height"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/list_item_product"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_tabasco_title"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

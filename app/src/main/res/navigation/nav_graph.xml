@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/action_bar_home">
+
+    <fragment
+            android:id="@+id/action_bar_home"
+            android:name="com.davlop.hottest.ui.home.HomeFragment"
+            android:label="fragment_home"
+            tools:layout="@layout/fragment_home" >
+        <action
+                android:id="@+id/action_home_to_details"
+                app:destination="@id/productDetailsFragment" />
+        <action
+                android:id="@+id/action_home_to_category"
+                app:destination="@id/productCategoryFragment" />
+        <action android:id="@+id/action_home_to_top"
+                app:destination="@id/topFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/action_bar_explore"
+            android:name="com.davlop.hottest.ui.explore.ExploreFragment"
+            android:label="fragment_explore"
+            tools:layout="@layout/fragment_explore" >
+        <action
+                android:id="@+id/action_explore_to_details"
+                app:destination="@id/productDetailsFragment" />
+        <action
+                android:id="@+id/action_explore_to_category"
+                app:destination="@id/productCategoryFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/action_bar_favorites"
+            android:name="com.davlop.hottest.ui.favorites.FavoritesFragment"
+            android:label="fragment_favorites"
+            tools:layout="@layout/fragment_favorites" >
+        <action
+                android:id="@+id/action_favorites_to_details"
+                app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/productDetailsFragment"
+            android:name="com.davlop.hottest.ui.details.ProductDetailsFragment"
+            android:label="ProductDetailsFragment">
+        <argument
+                android:name="@string/arg_id_product_id"
+                app:argType="string"/>
+        <action
+                android:id="@+id/action_details_to_category"
+                app:destination="@id/productCategoryFragment" />
+        <action
+                android:id="@+id/action_details_to_brand"
+                app:destination="@id/productBrandFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/productCategoryFragment"
+            android:name="com.davlop.hottest.ui.category.ProductCategoryFragment"
+            android:label="ProductCategoryFragment">
+        <argument
+                android:name="@string/arg_category_name"
+                app:argType="string"/>
+        <action
+                android:id="@+id/action_category_to_details"
+                app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment android:id="@+id/productBrandFragment"
+              android:name="com.davlop.hottest.ui.brand.ProductBrandFragment"
+              android:label="ProductBrandFragment">
+        <argument
+                android:name="@string/arg_brand_name"
+                app:argType="string"/>
+        <action
+                android:id="@+id/action_brand_to_details"
+                app:destination="@id/productDetailsFragment" />
+    </fragment>
+    <fragment android:id="@+id/topFragment" android:name="com.davlop.hottest.ui.explore.TopFragment"
+              android:label="fragment_top" tools:layout="@layout/fragment_top"/>
+</navigation>

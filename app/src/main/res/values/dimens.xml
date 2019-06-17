@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rv_home_height">152dp</dimen>
+    <dimen name="card_default_elevation">1dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="card_rv_item_width">136dp</dimen>
+    <dimen name="card_rv_item_height">124dp</dimen>
+    <dimen name="tab_elevation">8dp</dimen>
+    <dimen name="navtab_height">56dp</dimen>
+    <dimen name="navtab_tab_max_width">168dp</dimen>
+    <dimen name="navtab_indicator_height">0dp</dimen>
+    <dimen name="card_rv_item__big_height">324dp</dimen>
+</resources>

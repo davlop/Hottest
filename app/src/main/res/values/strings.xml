@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Hottest</string>
+    <string name="tv_top_products">Top Products</string>
+    <string name="extreme_products">Extreme</string>
+    <string name="hottest_products">Hottest</string>
+    <string name="hot_products">Hot</string>
+    <string name="medium_products">Medium</string>
+    <string name="mild_products">Mild</string>
+    <string name="arg_id_product_id">productId</string>
+    <string name="product_made_in">Made in</string>
+    <string name="product_ingredients">Ingredients</string>
+    <string name="description">Description</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="unknown_origin">Unknown Origin</string>
+    <string name="arg_category_name">categoryName</string>
+    <string name="made_in">Made in</string>
+    <string name="no_ingredients">No ingredients known</string>
+    <string name="heat_unknown">Unknown</string>
+    <string name="favorites_removed">Favorite Removed</string>
+    <string name="favorites_added">Added to favorites</string>
+    <string name="product_sellers">Product Sellers</string>
+    <string name="no_sellers">No sellers found</string>
+    <string name="no_price">No price</string>
+    <string name="add_to_favorites">Add Favorite</string>
+    <string name="remove_from_favorites">Remove Favorite</string>
+    <string name="tv_recently_added">Recently Added</string>
+    <string name="new_products">New</string>
+    <string name="tv_recommended_products">Recommended</string>
+    <string name="buy_product">Buy</string>
+    <string name="tv_favorites">Favorite Products</string>
+    <string name="show_less">&#160;show less</string>
+    <string name="no_favorites">No Favorite Products</string>
+    <string name="arg_brand_name">brandName</string>
+    <string name="view_all"><![CDATA[View all >>]]></string>
+    <string name="error_adding_favorite">Error adding favorite</string>
+    <string name="error_removing_favorite">Error removing favorite</string>
+    <string name="top">Top</string>
+    <string name="pepper_products">Pepper</string>
+
+    <!-- Pepper Types -->
+    <string name="habanero">Habanero</string>
+    <string name="carolina_reaper">Carolina Reaper</string>
+    <string name="ghost_pepper">Ghost Pepper</string>
+    <string name="trinidad_moruga">Trinidad Moruga</string>
+    <string name="naga_pepper">Naga Pepper</string>
+    <string name="dragons_breath">Dragon\'s Breath</string>
+    <string name="infinity_chili">Infinity Chili</string>
+    <string name="pepper_x">Pepper X</string>
+    <string name="seven_pot">7-Pot</string>
+    <string name="scotch_bonnet">Scotch Bonnet</string>
+    <string name="jalapeno">Jalapeño</string>
+    <string name="cayenne">Cayenne</string>
+    <string name="tabasco">Tabasco</string>
+
+    <!-- Heat level array -->
+    <string-array name="heat_level">
+        <item>Unknown</item>
+        <item>Mild</item>
+        <item>Medium</item>
+        <item>Hot</item>
+        <item>Hottest</item>
+        <item>Extreme</item>
+    </string-array>
+</resources>

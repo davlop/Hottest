@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_title_home">Home</string>
+    <string name="tab_title_explore">Explore</string>
+    <string name="tab_title_favorites">Favorites</string>
+    <string-array name="fragment_title_tabs_main">
+        <item>@string/tab_title_home</item>
+        <item>@string/tab_title_explore</item>
+        <item>@string/tab_title_favorites</item>
+    </string-array>
+    <integer-array name="fragment_icon_tabs_main">
+        <item>@drawable/ic_home_24px</item>
+        <item>@drawable/ic_explore_24px</item>
+        <item>@drawable/ic_favorites_24px</item>
+    </integer-array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.davlop.hottest.ui.base.StableViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/vp_explore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top" />
+
+</com.davlop.hottest.ui.base.StableViewPager>
