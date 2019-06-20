@@ -19,7 +19,7 @@ Hottest is the perfect app for spicy food lovers! Hottest lets you search and bu
 
 ❤️ Save your favorites - Did you find any spicy sauce you like? Save it to your favorites for later
 
-⭐ Rate-based - Rate products and see what other users have rated 
+🌟 Rate-based - Rate products and see what other users have rated 
 
 ## Technology
 - 100% Kotlin
