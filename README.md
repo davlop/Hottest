@@ -13,13 +13,13 @@ Hottest is the perfect app for spicy food lovers! Hottest lets you search and bu
 
 🌶 Search the hottest products - With Hottest, you can find tons of spicy food. From sauces to peppers or snacks. You can search by heat level, category, type of pepper, top products, recommended...
 
-≡ Get product details - You can find everything about a hot product. Images, description, ingredients, heat level...
+ℹ️ Get product details - You can find everything about a hot product. Images, description, ingredients, heat level...
 
-﹩Buy hot food - Hottest will give you a list of sellers and an approximate price for each spicy product so you can buy them! 
+💲 Buy hot food - Hottest will give you a list of sellers and an approximate price for each spicy product so you can buy them! 
 
-♥ Save your favorites - Did you find any spicy sauce you like? Save it to your favorites for later
+❤️ Save your favorites - Did you find any spicy sauce you like? Save it to your favorites for later
 
-🟊 Rate-based - Rate products and see what other users have rated 
+⭐ Rate-based - Rate products and see what other users have rated 
 
 ## Technology
 - 100% Kotlin
