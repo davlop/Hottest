@@ -29,7 +29,7 @@ Hottest is the perfect app for spicy food lovers! Hottest lets you search and bu
 - Dagger 2 for Dependency Injection throughout the project
 - Room for data persistence
 - Android Navigation Component
-- RxJava 2 for multi-threading, operators, and Subjects for click handling
+- RxJava 2 for multi-threading, operators, and Subjects for click handling in RecyclerView items
 - LiveData to expose products' data to UI
 - Firebase Cloud Firestore to store product information
 - Firebase Cloud Storage to store product images
