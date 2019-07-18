@@ -13,6 +13,7 @@ import com.davlop.hottest.ui.ProductListAdapter
 import com.davlop.hottest.ui.base.ProductBaseFragment
 import com.davlop.hottest.utils.setUpWithProductListAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
+import timber.log.Timber
 
 class HomeFragment : ProductBaseFragment() {
 

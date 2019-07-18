@@ -1,7 +1,12 @@
 package com.davlop.hottest.data.repo
 
+import com.davlop.hottest.data.model.Product
 import com.davlop.hottest.data.source.local.ProductLocalDataSource
 import com.davlop.hottest.data.source.remote.ProductRemoteDataSource
+import io.reactivex.Completable
+import io.reactivex.Single
+import io.reactivex.schedulers.Schedulers
+import timber.log.Timber
 import javax.inject.Inject
 
 class ProductRepository @Inject constructor(
@@ -19,6 +24,23 @@ class ProductRepository @Inject constructor(
                 localDataSource.insertAll(productsList)
                     .subscribe()
             }
+
+    fun addRatingToProduct(rating: Int, productId: String?, userId: String?): Single<Product>? {
+        if (productId == null) return null
+
+        return Single.create<Product> { emitter ->
+            remoteDataSource.addRatingToProduct(rating, productId, userId)
+                ?.addOnSuccessListener {
+                    remoteDataSource.getProductFromFirebaseById(productId)
+                        .subscribe { product ->
+                            localDataSource.insertAll(listOf(product))
+                                .subscribe { emitter.onSuccess(product) }
+                        }
+                }
+        }.subscribeOn(Schedulers.io())
+    }
+
+    fun getProductDocumentReferenceById(productId: String?) = remoteDataSource.getProductDocumentReferenceById(productId)
 
     fun getTopProducts() = localDataSource.getTopProducts()
 

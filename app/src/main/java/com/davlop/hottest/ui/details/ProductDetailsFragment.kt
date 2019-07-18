@@ -2,6 +2,7 @@ package com.davlop.hottest.ui.details
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -20,6 +21,7 @@ import com.davlop.hottest.utils.startBrowserIntent
 import com.google.android.material.chip.Chip
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.fragment_product_details.*
+import timber.log.Timber
 
 class ProductDetailsFragment : ProductBaseFragment() {
 
@@ -176,6 +178,38 @@ class ProductDetailsFragment : ProductBaseFragment() {
     }
 
     private fun setProductRatingBar() {
+        rb_rating.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                val rateFragment = RateProductDialogFragment(onRateListener = { rating ->
+                    val productId = binding.product?.id
+                    val userId = productViewModel.currentUser?.uid
+                    productViewModel.getProductDocumentReferenceById(productId)?.get()
+                        ?.addOnSuccessListener { document ->
+                            val ratings = document.data?.get("ratings") as HashMap<String, Long>?
+                            val hasUserRated = ratings?.get(userId) != null
+                            if (hasUserRated)
+                                Toast.makeText(context, getString(R.string.already_voted), Toast.LENGTH_SHORT).show()
+                            else {
+                                productViewModel.addRatingToProduct(rating, productId, userId)
+                                    ?.observeOn(AndroidSchedulers.mainThread())
+                                    ?.subscribe (
+                                        { product ->
+                                            binding.product = product
+                                            updateRating()
+                                            Toast.makeText(context, getString(R.string.product_rated), Toast.LENGTH_SHORT).show()
+                                        }, {  })
+                            }
+                        }
+                })
+                rateFragment.show(fragmentManager, "dialogRate")
+            }
+            true
+        }
+
+        updateRating()
+    }
+
+    private fun updateRating() {
         binding.product?.let {
             rb_rating.rating = it.rating?.toFloat() ?: 0.0f
         }

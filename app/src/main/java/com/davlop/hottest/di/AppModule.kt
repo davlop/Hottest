@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.room.Room
 import com.davlop.hottest.data.source.local.AppDatabase
 import com.davlop.hottest.data.source.local.room.ProductDao
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import dagger.Module
@@ -31,5 +32,9 @@ class AppModule {
     @Singleton
     @Provides
     fun provideFirebaseStorage() = FirebaseStorage.getInstance()
+
+    @Singleton
+    @Provides
+    fun provideFirebaseAuth() = FirebaseAuth.getInstance()
 
 }

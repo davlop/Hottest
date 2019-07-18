@@ -17,16 +17,30 @@ data class Product(
     val imageRef: String?,
     val categories: List<String> = listOf(),
     val price: Double? = null,
-    val rating: Double? = 0.0,
+    var rating: Double? = 0.0,
+    var ratingTotals: Int = 0,
     val origin: String? = null,
     val size: String? = null,
     val sellers: List<String>? = null,
+    var ratings: Map<String, Int>? = null,
     val timestamp: OffsetDateTime = OffsetDateTime.now()
 ) {
     override fun toString() = id
 
     companion object {
         fun fromFirestoreMap(map: Map<String, Any>): Product {
+            var rating = 0.0
+            var ratingsNumber = 0
+            val ratings = map["ratings"] as? Map<String, Int>
+            ratings?.let {
+                var ratingsTotal = 0.0
+                it.forEach { entry ->
+                    ratingsNumber++
+                    ratingsTotal += entry.value
+                }
+                rating = ratingsTotal / ratingsNumber
+            }
+
             return Product(
                 map["name"] as String,
                 map["name"] as String,
@@ -37,10 +51,12 @@ data class Product(
                 map["imageRef"] as? String,
                 map["categories"] as List<String>,
                 (map["price"] as? String)?.toDouble(),
-                map["rating"] as? Double,
+                rating,
+                ratingsNumber,
                 map["origin"] as? String,
                 map["size"] as? String,
-                map["sellers"] as? List<String>
+                map["sellers"] as? List<String>,
+                ratings
             )
         }
     }
@@ -69,6 +85,17 @@ class ProductConverters {
     fun jsonToList(string: String): List<String>? {
         val type = object : TypeToken<List<String>>() {}.type
         return gson.fromJson(string, type)
+    }
+
+    @TypeConverter
+    fun mapToString(map: Map<String, Int>?): String? {
+        return gson.toJson(map)
+    }
+
+    @TypeConverter
+    fun stringToMap(map: String?): Map<String, Int>? {
+        val type = object : TypeToken<Map<String, Int>>() {}.type
+        return gson.fromJson(map, type)
     }
 
 }

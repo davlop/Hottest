@@ -51,6 +51,8 @@
     <string name="jalapeno">Jalapeño</string>
     <string name="cayenne">Cayenne</string>
     <string name="tabasco">Tabasco</string>
+    <string name="already_voted">You\'ve already voted</string>
+    <string name="product_rated">Product Rated</string>
 
     <!-- Heat level array -->
     <string-array name="heat_level">

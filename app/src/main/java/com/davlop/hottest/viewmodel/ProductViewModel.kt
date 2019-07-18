@@ -4,6 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.davlop.hottest.data.model.Product
 import com.davlop.hottest.data.repo.ProductRepository
+import com.google.firebase.auth.FirebaseUser
+import io.reactivex.Completable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
@@ -11,6 +13,8 @@ import javax.inject.Inject
 class ProductViewModel @Inject constructor(private val productRepository: ProductRepository) : ViewModel() {
 
     private val disposable: CompositeDisposable by lazy { CompositeDisposable() }
+
+    var currentUser: FirebaseUser? = null
 
     private val topProducts by lazy { MutableLiveData<List<Product>>() }
 
@@ -71,6 +75,11 @@ class ProductViewModel @Inject constructor(private val productRepository: Produc
                 userFavorites.value = favoriteProducts
             }
     )
+
+    fun addRatingToProduct(rating: Int, productId: String?, userId: String?) =
+        productRepository.addRatingToProduct(rating, productId, userId)
+
+    fun getProductDocumentReferenceById(productId: String?) = productRepository.getProductDocumentReferenceById(productId)
 
     fun getProductsByCategory(category: String) = productRepository.getProductsByCategory(category)
 
